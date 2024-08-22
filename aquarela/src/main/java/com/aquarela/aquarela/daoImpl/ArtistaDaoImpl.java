@@ -2,14 +2,23 @@ package com.aquarela.aquarela.daoImpl;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
 import com.aquarela.aquarela.dao.ArtistaDao;
 import com.aquarela.aquarela.domain.Artista;
 
+
+@Repository
 public class ArtistaDaoImpl implements ArtistaDao {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     @Override
     public Artista postArtista() {
-        // TODO Auto-generated method stub
+        
         throw new UnsupportedOperationException("Unimplemented method 'postArtista'");
     }
 
